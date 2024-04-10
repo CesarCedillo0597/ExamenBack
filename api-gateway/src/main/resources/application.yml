@@ -1,0 +1,7 @@
+spring:
+  cloud.gateway.mvc:
+    routesMap:
+      configRoute1:
+        uri: lb://WORKERS-MICROSERVICE
+        predicates:
+          - Path=/employees/**, /calculate-salary, /worked-hours, /addworked-hours
